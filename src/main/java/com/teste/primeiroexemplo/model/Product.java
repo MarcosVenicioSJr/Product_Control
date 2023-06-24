@@ -1,6 +1,7 @@
 package com.teste.primeiroexemplo.model;
 
 public class Product {
+  // #region Attributes
   private Integer id;
 
   private String name;
@@ -11,6 +12,8 @@ public class Product {
 
   private String observation;
 
+  // #endregion
+  // #region Gets and Sets
   public Integer getId() {
     return id;
   }
@@ -50,5 +53,5 @@ public class Product {
   public void setObservation(String observation) {
     this.observation = observation;
   }
-  
+  // #endregion
 }
