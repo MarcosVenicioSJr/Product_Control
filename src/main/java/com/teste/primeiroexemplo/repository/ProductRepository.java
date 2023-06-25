@@ -7,8 +7,6 @@ import java.util.Optional;
 import org.springframework.stereotype.Repository;
 import com.teste.primeiroexemplo.model.Product;
 
-import io.micrometer.core.instrument.Meter.Id;
-
 @Repository
 public class ProductRepository {
   private List<Product> product = new ArrayList<Product>();
