@@ -30,7 +30,7 @@ public class ProductService {
     productRepository.removeProduct(id);
   }
 
-  public Optional<Product> update(Product model) {
-    return productRepository.update(model);
+  public Optional<Product> update(Integer id, Product model) {
+    return productRepository.update(id, model);
   }
 }

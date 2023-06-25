@@ -31,8 +31,8 @@ public class ProductRepository {
     product.removeIf(product -> product.getId() == id);
   }
 
-  public Optional<Product> update(Product model) {
-    Optional<Product> product = getById(model.getId());
+  public Optional<Product> update(Integer id, Product model) {
+    Optional<Product> product = getById(id);
 
     product.ifPresent(p -> {
       p.setName(model.getName());
