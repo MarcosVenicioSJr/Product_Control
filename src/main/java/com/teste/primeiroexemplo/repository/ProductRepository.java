@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 import com.teste.primeiroexemplo.model.Product;
+import com.teste.primeiroexemplo.model.exception.ResourceNotFoundException;
 
 @Repository
 public class ProductRepository {
@@ -33,6 +34,9 @@ public class ProductRepository {
 
   public Optional<Product> update(Integer id, Product model) {
     Optional<Product> product = getById(id);
+    if (product.isEmpty()) {
+      throw new ResourceNotFoundException("Produto não encontrado");
+    }
 
     product.ifPresent(p -> {
       p.setName(model.getName());
